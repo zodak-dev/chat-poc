@@ -1,0 +1,28 @@
+{
+  "extends": ["react-app", "react-app/jest"],
+  "ignorePatterns": [
+    "node_modules/"
+  ],
+  "rules": {
+    "no-template-curly-in-string": "error",
+    "semi": "error",
+    "camelcase": "error",
+    "no-unused-vars": ["warn", { "vars": "local" }],
+    "quotes": ["error", "single", { "allowTemplateLiterals": false }],
+    "arrow-parens": ["error", "as-needed"],
+    "prefer-const": "error",
+    "no-undef": "error",
+    "no-trailing-spaces": "error",
+    "comma-dangle": "error",
+    "no-console": "warn",
+    "require-await": "error",
+    "operator-linebreak": ["error", "before"],
+    "eqeqeq": ["error", "always"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "keyword-spacing": ["error", { "before": true, "after": true }]
+  }
+}
