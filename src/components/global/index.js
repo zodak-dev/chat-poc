@@ -5,6 +5,7 @@ export default createGlobalStyle`
     width: 100%;
     height: 100%;
     display: flex;
+    font-family: "Inter", "system-ui";
   }
 
   body {
