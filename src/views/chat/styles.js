@@ -42,6 +42,32 @@ export const SideChats = Styled(Flex)`
 	overflow-y:auto;
 `;
 
+export const MainChat = Styled(Flex)`
+	overflow-y:auto;
+	justify-content:flex-start;
+	flex:1;
+	background-color:grey;
+	align-items:stretch;
+	flex-direction:column;
+`;
+
 export const ChatCard = Styled(Flex)`
-	flex-basis:10%;
+	min-height:80px;
+	background-color:MediumSeaGreen;
+	&:hover {
+		cursor: pointer;
+	}
+`;
+
+export const MessageWrapper = Styled(Flex)`
+	flex-direction:column;
+`;
+
+export const MessageBox = Styled(Flex)`
+	overflow-wrap: anywhere;
+	white-space: pre-wrap;
+	width:60%;
+	margin:6px;
+	border-radius:8px;
+	padding:12px;
 `;
