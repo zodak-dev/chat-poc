@@ -1,4 +1,4 @@
-import { createAction, createAsyncThunk } from '@reduxjs/toolkit';
+import {createAction, createAsyncThunk} from '@reduxjs/toolkit';
 import UserService from '../../api/user';
 
 export const signIn = createAsyncThunk(
@@ -19,13 +19,14 @@ export const signIn = createAsyncThunk(
 );
 
 export const checkLocalCredentials = createAction(
-	'user/refreshLocalCredentials',
+	'user/checkLocalCredentials',
 	() => {
 		const userRaw = localStorage.getItem('user');
-		if (!userRaw) return;
+
+		if (!userRaw) return {error: true, payload: 'ERROR'};
 
 		const user = JSON.parse(userRaw);
-		if (!user) return;
+		if (!user) return {error: true, payload: 'ERROR'};
 
 		return {
 			payload: user
