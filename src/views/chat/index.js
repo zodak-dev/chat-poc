@@ -1,5 +1,7 @@
-import {Layout, Container, Flex, InputGroup, MessageArea, SideChats, ChatCard, MainChat, MessageBox, MessageWrapper} from './styles';
+import {Layout, Container, InputGroup, MessageArea, SideChats, ChatCard, MainChat, SideHeader, ChatHeader} from './styles';
+import Flex from '../../components/flex';
 import Button from '../../components/button';
+import Msgbox from '../../components/chatmsg';
 
 
 const Chat = () => {
@@ -7,10 +9,15 @@ const Chat = () => {
 		<Layout>
 			<Container>
 				<Flex j_content='flex-start' w='30%' a_items='stretch' d='column'>
-					<Flex j_content='flex-start' basis='10%' bg_col='darkgrey'>
-						<h3>MON AVATAR</h3>
-					</Flex>
-					<SideChats j_content='flex-start' g='1' a_items='stretch' bg_col='gray' d='column'>
+					<SideHeader j_content='flex-start'>
+						<Flex>
+							Icon
+						</Flex>
+						<Flex>
+							User
+						</Flex>
+					</SideHeader>
+					<SideChats j_content='flex-start' g='1' a_items='stretch' bg_col='#2a2f32' d='column'>
 						<ChatCard>
 							Sacha Dupont
 						</ChatCard>
@@ -45,80 +52,29 @@ const Chat = () => {
 					</SideChats>
 				</Flex>
 				<Flex j_content='flex-start' w='70%' a_items='stretch' d='column'>
-					<Flex j_content='flex-start' basis='10%' bg_col="darkgrey">
-						<h3>SACHA DUPONT</h3>
-					</Flex>
+					<ChatHeader j_content='flex-start'>
+						<span>SACHA DUPONT</span>
+					</ChatHeader>
 					<MainChat>
-						<MessageWrapper a_items='flex-start'>
-							<MessageBox bg_col='MediumSeaGreen'>
-								<span>This means that your reducers need to contain logic for handling the success and error states. You can roll your own, or use handleAction()/handleActions(), also included in the redux-actions library, to help create these "error aware" reducers. I'll leave you to look at the docs for handleAction().</span>
-							</MessageBox>
-							<MessageBox bg_col='MediumSeaGreen'>
-								<span>Wsh bien ou quoi.</span>
-							</MessageBox>
-						</MessageWrapper>
-						<MessageWrapper a_items='flex-end'>
-							<MessageBox bg_col='Red'>
-								<span>Ici c'estun message 11111.</span>
-							</MessageBox>
-							<MessageBox bg_col='Red'>
-								<span>Ici c'estun message 222222.</span>
-							</MessageBox>
-						</MessageWrapper>
-						<MessageWrapper a_items='flex-start'>
-							<MessageBox bg_col='MediumSeaGreen'>
-								<span>This means that your reducers need to contain logic for handling the success and error states. You can roll your own, or use handleAction()/handleActions(), also included in the redux-actions library, to help create these "error aware" reducers. I'll leave you to look at the docs for handleAction().</span>
-							</MessageBox>
-							<MessageBox bg_col='MediumSeaGreen'>
-								<span>Wsh bien ou quoi.</span>
-							</MessageBox>
-						</MessageWrapper>
-						<MessageWrapper a_items='flex-end'>
-							<MessageBox bg_col='Red'>
-								<span>Ici c'estun message 11111.</span>
-							</MessageBox>
-							<MessageBox bg_col='Red'>
-								<span>Ici c'estun message 222222.</span>
-							</MessageBox>
-						</MessageWrapper>
-						<MessageWrapper a_items='flex-start'>
-							<MessageBox bg_col='MediumSeaGreen'>
-								<span>This means that your reducers need to contain logic for handling the success and error states. You can roll your own, or use handleAction()/handleActions(), also included in the redux-actions library, to help create these "error aware" reducers. I'll leave you to look at the docs for handleAction().</span>
-							</MessageBox>
-							<MessageBox bg_col='MediumSeaGreen'>
-								<span>Wsh bien ou quoi.</span>
-							</MessageBox>
-						</MessageWrapper>
-						<MessageWrapper a_items='flex-end'>
-							<MessageBox bg_col='Red'>
-								<span>Ici c'estun message 11111.</span>
-							</MessageBox>
-							<MessageBox bg_col='Red'>
-								<span>Ici c'estun message 222222.</span>
-							</MessageBox>
-						</MessageWrapper>
-						<MessageWrapper a_items='flex-start'>
-							<MessageBox bg_col='MediumSeaGreen'>
-								<span>This means that your reducers need to contain logic for handling the success and error states. You can roll your own, or use handleAction()/handleActions(), also included in the redux-actions library, to help create these "error aware" reducers. I'll leave you to look at the docs for handleAction().</span>
-							</MessageBox>
-							<MessageBox bg_col='MediumSeaGreen'>
-								<span>Wsh bien ou quoi.</span>
-							</MessageBox>
-						</MessageWrapper>
-						<MessageWrapper a_items='flex-end'>
-							<MessageBox bg_col='Red'>
-								<span>Ici c'estun message 11111.</span>
-							</MessageBox>
-							<MessageBox bg_col='Red'>
-								<span>Ici c'estun message 222222.</span>
-							</MessageBox>
-						</MessageWrapper>
+						<Msgbox isSent={true} message="Salut" />
+						<Msgbox isSent={false} message="Wsh, bien ?" />
+						<Msgbox isSent={true} message="Salut" />
+						<Msgbox isSent={false} message="Wsh, bien ?" />
+						<Msgbox isSent={true} message="Salut" />
+						<Msgbox isSent={false} message="Wsh, bien ?" />
+						<Msgbox isSent={true} message="Salut" />
+						<Msgbox isSent={false} message="Wsh, bien ?" />
+						<Msgbox isSent={true} message="Salut" />
+						<Msgbox isSent={false} message="Wsh, bien ?" />
+						<Msgbox isSent={true} message="Salut" />
+						<Msgbox isSent={false} message="Wsh, bien ?" />
+						<Msgbox isSent={true} message="Salut" />
+						<Msgbox isSent={false} message="Wsh, bien ?" />
 					</MainChat>
-					<Flex bg_col='grey'>
+					<Flex bg_col='#2a2f32'>
 						<InputGroup>
 							<MessageArea name="message" />
 							<Button>SEND</Button>
-
 						</InputGroup>
 					</Flex>
 				</Flex>
