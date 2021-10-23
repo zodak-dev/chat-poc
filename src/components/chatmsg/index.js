@@ -23,7 +23,7 @@ const MessageWrapper = Styled(Flex)`
 const MessageBox = Styled(Flex)`
 	overflow-wrap: anywhere;
 	white-space: pre-wrap;
-	width:55%;
+	width:53%;
 	margin:6px;
 	border-radius:8px;
 	padding:8px;
